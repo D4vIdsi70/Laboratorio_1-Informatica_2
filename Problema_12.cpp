@@ -10,6 +10,38 @@ Code, Compile, Run and Debug online from anywhere in world.
 using namespace std;
 
 const int dim = 10;
+bool esCuadradoMagico(int matriz[dim][dim], int n);
+
+int main() {
+    int n;
+    cout << "Ingrese el tamaño de la matriz cuadrada: ";
+    cin >> n;
+
+    int matriz[dim][dim];
+
+    cout << "Ingrese los elementos de la matriz:" << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> matriz[i][j];
+        }
+    }
+
+    cout << "La matriz ingresada es:" << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    if (esCuadradoMagico(matriz, n)) {
+        cout << "La matriz es un cuadrado mágico." << endl;
+    } else {
+        cout << "La matriz no es un cuadrado mágico." << endl;
+    }
+
+    return 0;
+}
 
 bool esCuadradoMagico(int matriz[dim][dim], int n){
     int sumaFila = 0;
@@ -54,35 +86,4 @@ bool esCuadradoMagico(int matriz[dim][dim], int n){
     }
 
     return true;
-}
-
-int main() {
-    int n;
-    cout << "Ingrese el tamaño de la matriz cuadrada: ";
-    cin >> n;
-
-    int matriz[dim][dim];
-
-    cout << "Ingrese los elementos de la matriz:" << endl;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cin >> matriz[i][j];
-        }
-    }
-
-    cout << "La matriz ingresada es:" << endl;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << matriz[i][j] << " ";
-        }
-        cout << endl;
-    }
-
-    if (esCuadradoMagico(matriz, n)) {
-        cout << "La matriz es un cuadrado mágico." << endl;
-    } else {
-        cout << "La matriz no es un cuadrado mágico." << endl;
-    }
-
-    return 0;
 }
