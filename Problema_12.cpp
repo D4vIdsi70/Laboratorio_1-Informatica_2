@@ -12,7 +12,7 @@ using namespace std;
 const int dim = 10;
 bool esCuadradoMagico(int matriz[dim][dim], int n);
 
-int main() {
+int main(){
     int n;
     cout << "Ingrese el tamaño de la matriz cuadrada: ";
     cin >> n;
