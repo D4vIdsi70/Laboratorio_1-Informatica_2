@@ -17,7 +17,7 @@ void imprimirMatriz(int *matriz, int filcol);
 
 void rotarMatriz90Grados(int *matriz, int filcol);
 
-int main() {
+int main(){
     int matriz[filcol][filcol];
     int *ptrMatriz = &matriz[0][0];
 
