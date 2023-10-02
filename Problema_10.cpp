@@ -33,7 +33,7 @@ int main()
     
     for(int i = 1; i < longitud; i++){
         if(resultado[i] > resultado[i - 1]){
-            total -= resultado[i];
+            total = (total - resultado[i - 1]) + (resultado[i] - resultado[i - 1]);
         }
         else{
             total += resultado[i];
